@@ -1,0 +1,35 @@
+﻿@model CreateOrderVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CreateOrderVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WholesalerId" class="control-label"></label>
+                <input asp-for="WholesalerId" class="form-control" />
+                <span asp-validation-for="WholesalerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderPrice" class="control-label"></label>
+                <input asp-for="OrderPrice" class="form-control" />
+                <span asp-validation-for="OrderPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalOrderPrice" class="control-label"></label>
+                <input asp-for="TotalOrderPrice" class="form-control" />
+                <span asp-validation-for="TotalOrderPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
